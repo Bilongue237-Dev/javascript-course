@@ -1,0 +1,13 @@
+h1 {
+    display: flex;
+    justify-content: center;
+    color: red;
+    box-shadow: 10px;
+    shape-margin: 20px;
+}
+header {
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+}
