@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coin-flip game</title>
+</head>
+
+<body>
+
+
+
+
+    <script>
+        let numeros = Math.random()
+        let guess = ''
+        if (numeros <= 1 / 2) {
+            guess = 'head'
+        } else if (numeros > 1 / 2) {
+            guess = 'tails'
+        }
+
+        let numeros1 = Math.random()
+        let result = ''
+        if (numeros1 <= 1 / 2) {
+            result = 'head'
+        } else if (numeros1 > 1 / 2) {
+            result = 'tails'
+        }
+
+        if (guess === result) {
+            console.log('you win')
+        } else {
+            console.log('you lose')
+        }
+
+
+    </script>
+</body>
+
+</html>
