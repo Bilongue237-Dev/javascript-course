@@ -8,32 +8,51 @@
 </head>
 
 <body>
+    <button onclick="
+        playGame()
+        if (guess === 'heads') {
+            results = 'win'
+        } else {
+            results = 'lose'
+        }
+        console.log(results)
+        "> heads </button>
+
+    <button onclick="
+     let numeros = Math.random()
+        let guess = ''
+        let results = ''
+        if (numeros <= 1 / 2) {
+            guess = 'heads'
+        } else if (numeros > 1 / 2) {
+            guess = 'tails'
+        }
+        if (guess === 'heads') {
+            results = 'lose'
+        } else {
+            results = 'win'
+        }
+        console.log(results)
+    "> tails </button>
 
 
 
 
     <script>
-        let numeros = Math.random()
+
         let guess = ''
-        if (numeros <= 1 / 2) {
-            guess = 'head'
-        } else if (numeros > 1 / 2) {
-            guess = 'tails'
+        let results = ''
+
+        function playGame() {
+            let numeros = Math.random()
+            if (numeros <= 1 / 2) {
+                guess = 'heads'
+            } else if (numeros > 1 / 2) {
+                guess = 'tails'
+            }
         }
 
-        let numeros1 = Math.random()
-        let result = ''
-        if (numeros1 <= 1 / 2) {
-            result = 'head'
-        } else if (numeros1 > 1 / 2) {
-            result = 'tails'
-        }
 
-        if (guess === result) {
-            console.log('you win')
-        } else {
-            console.log('you lose')
-        }
 
 
     </script>

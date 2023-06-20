@@ -11,3 +11,32 @@ header {
     justify-content: center;
     font-family: 'Times New Roman', Times, serif;
 }
+
+button{
+    cursor: pointer;
+    color: white;
+    background-color: rgb(33, 12, 12);
+    border-radius: 30px;
+    border: none;
+    transition: 0.2ms;
+    padding: 10px;
+    font-weight: 800;
+}
+.aftereffect{
+    background-color: rgb(240, 240, 240);
+    color: black;
+    transition: 0.2ms;
+}
+.is-toggled {
+    cursor: pointer;
+    padding: 20px;
+    width: 170px;
+    background-color: rgba(58, 57, 57, 0.094);
+    color: black;
+    font-size: medium;
+}
+.not-toggled{
+    background-color: black;
+    color: white;
+    transition: 0.3ms;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <title>execrices</title>
+</head>
+
+<body>
+    <button class="is-toggled" onclick="
+    jeux()
+        ">Gaming-on</button>
+
+
+
+
+    <script>
+
+        function jeux() {
+            let transform01 = document.querySelector('.is-toggled');
+
+            if (transform01.innerText === "Gaming-on") {
+                transform01.innerHTML = "Gaming-off";
+                transform01.classList.add('not-toggled')
+
+            } else {
+                transform01.innerHTML = "Gaming-on";
+                transform01.classList.remove('not-toggled')
+            }
+
+        }
+        console.log(jeux())
+
+    </script>
+
+</body>
+
+</html>

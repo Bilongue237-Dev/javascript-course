@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrays and loops</title>
+</head>
+
+<body>
+    <p>Todo List Practice 1</p>
+    <input class="entree" type="text" onkeydown="keyListener()">
+    <button onclick="
+    addTodo()
+    renderTodoList()
+    " class="cliquer">Add</button>
+    <div class="affiche"></div>
+
+
+
+
+    <script>
+
+        const toDoList = []
+
+        function renderTodoList() {
+            let todoListHTML = '';
+            for (i = 0; i < toDoList.length; i++) {
+                const todo = toDoList[i];
+                const html = `<p>${todo} 
+                                    <button onclick="
+                                    toDoList.splice(${i},1);
+                                    renderTodoList(); 
+                                        ">delette
+                                    </button>
+                              </p>`;
+                todoListHTML += html;
+
+            }
+
+            document.querySelector('.affiche').innerHTML = todoListHTML
+        }
+
+        function keyListener() {
+            let key = event.key
+            if (key === 'Enter') {
+                addTodo()
+            }
+        }
+
+        function addTodo() {
+
+            let entree = document.querySelector('.entree').value;
+            let entry = toDoList.push(entree);
+            console.log(toDoList);
+            document.querySelector('.entree').value = '';
+
+            renderTodoList()
+        }
+
+
+
+
+
+
+
+
+
+
+        const nums = [1, 1, 3]
+        let cal = 0
+        for (i = 0; i < nums.length; i++) {
+            avis = nums[i]
+            cal = cal + avis
+        }
+        console.log(cal)
+
+
+    </script>
+
+</body>
+
+</html>
