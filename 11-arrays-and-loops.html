@@ -9,7 +9,7 @@
 
 <body>
     <p>Todo List Practice 1</p>
-    <input class="entree" type="text" onkeydown="keyListener()">
+    <input class="entree" type="text" onkeydown="keyListener()"> <input class="calendrier" type="date">
     <button onclick="
     addTodo()
     renderTodoList()
@@ -24,16 +24,20 @@
         const toDoList = []
 
         function renderTodoList() {
+
+            let cal = document.querySelector('.calendrier').value;
+
             let todoListHTML = '';
             for (i = 0; i < toDoList.length; i++) {
                 const todo = toDoList[i];
                 const html = `<p>${todo} 
-                                    <button onclick="
+                                ${cal}
+                <button onclick="
                                     toDoList.splice(${i},1);
                                     renderTodoList(); 
                                         ">delette
-                                    </button>
-                              </p>`;
+                </button>
+                              </p >`;
                 todoListHTML += html;
 
             }
